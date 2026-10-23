@@ -1,0 +1,45 @@
+name: Refresh index
+
+# 任何推送到 main、每 6 小时、以及手动触发时，重新从 npm 抓版本并更新 index.json。
+on:
+  push:
+    branches: [main]
+    paths: ["plugins.json"]
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-index
+  cancel-in-progress: true
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Rebuild index.json from npm
+        run: node scripts/build-index.mjs --write
+
+      - name: Validate with the DSH market validator
+        run: node scripts/validate-index.mjs --check-registry
+
+      - name: Commit when the index changed
+        run: |
+          if git diff --quiet -- index.json; then
+            echo "index.json 无变化，跳过提交"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.json
+          git commit -m "chore: refresh index.json from npm"
+          git push

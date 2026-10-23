@@ -1,0 +1,150 @@
+{
+  "format": 1,
+  "title": {
+    "en": "TuWeiZhi's DSH Plugins",
+    "zh": "TuWeiZhi 的 DSH 插件"
+  },
+  "description": {
+    "en": "Hand-picked bundles for DeepSeek Harness: the balance whale widget and a word-selection translator.",
+    "zh": "DeepSeek Harness 的两个自用增强插件：余额小鲸鱼挂件、划词翻译。"
+  },
+  "metadata": {
+    "categories": {
+      "widget": {
+        "title": {
+          "en": "Widgets",
+          "zh": "挂件"
+        }
+      },
+      "translation": {
+        "title": {
+          "en": "Translation",
+          "zh": "翻译"
+        }
+      }
+    },
+    "labels": {
+      "chinese-ui": {
+        "title": {
+          "en": "Chinese UI",
+          "zh": "中文界面"
+        }
+      },
+      "no-api-key": {
+        "title": {
+          "en": "No API key",
+          "zh": "无需 API Key"
+        }
+      }
+    },
+    "sortKeys": {
+      "pinned": {
+        "title": {
+          "en": "Pinned",
+          "zh": "置顶"
+        },
+        "order": "desc"
+      }
+    }
+  },
+  "plugins": [
+    {
+      "name": "@tuweizhi/dsh-whale-widget",
+      "title": {
+        "en": "Balance Whale Widget",
+        "zh": "余额小鲸鱼挂件"
+      },
+      "description": "DSH Web 界面右下角的 DeepSeek 余额小鲸鱼挂件:余额/今日已用/峰谷定价、自定义泡泡点击序列(文本/余额/今日/峰谷/图片/随机语句与并列加权选择)、逐行样式与字体、悬浮快捷编辑、音效与每轮消耗、自定义角色/动图/音效、吸附与翻转自定义",
+      "icon": "data:image/png;base64,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",
+      "homepage": "https://github.com/TuWeiZhi/dsh-whale-widget#readme",
+      "repository": {
+        "url": "https://github.com/TuWeiZhi/dsh-whale-widget"
+      },
+      "metadata": {
+        "category": "widget",
+        "keywords": [
+          "whale",
+          "balance",
+          "余额",
+          "挂件",
+          "cost"
+        ],
+        "labels": [
+          "chinese-ui"
+        ],
+        "sortKeys": {
+          "pinned": 2
+        }
+      },
+      "versions": [
+        {
+          "version": "0.5.1",
+          "publishTimestamp": 1792747039,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {}
+        },
+        {
+          "version": "0.5.0",
+          "publishTimestamp": 1792745140,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {}
+        }
+      ]
+    },
+    {
+      "name": "@tuweizhi/dsh-translator",
+      "title": {
+        "en": "Word-Selection Translator",
+        "zh": "划词翻译"
+      },
+      "description": "Youdao-style word-selection translation for the DSH web GUI. Select text anywhere, click the floating button, get a translation — by default through keyless public translation endpoints, with the harness's own LLM as the other engine. 有道风格划词翻译：DSH Web GUI",
+      "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjM2IiBoZWlnaHQ9IjM2IiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IldvcmQtc2VsZWN0aW9uIHRyYW5zbGF0aW9uIj4KICA8IS0tIFNhbWUgbWFyayBhcyB0aGUgaW4tcGFnZSBmbG9hdGluZyB0cmFuc2xhdGUgYnV0dG9uOiBsdWNpZGUgImxhbmd1YWdlcyIgKE1JVCksCiAgICAgICBzdHJva2Utb25seSwgb25lIGZpeGVkIGJyYW5kIGJsdWUgc28gaXQgcmVhZHMgb24gbGlnaHQgYW5kIGRhcmsgcGFuZWxzLiAtLT4KICA8ZyBmaWxsPSJub25lIiBzdHJva2U9IiM0MTc2ZTYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICAgIDxwYXRoIGQ9Im01IDhsNiA2bS03IDBsNi02bDItM00yIDVoMTJNNyAyaDFtMTQgMjBsLTUtMTBsLTUgMTBtMi00aDYiLz4KICA8L2c+Cjwvc3ZnPgo=",
+      "homepage": "https://github.com/TuWeiZhi/dsh-translator#readme",
+      "repository": {
+        "url": "https://github.com/TuWeiZhi/dsh-translator"
+      },
+      "metadata": {
+        "category": "translation",
+        "keywords": [
+          "translation",
+          "划词翻译",
+          "word-selection",
+          "dictionary"
+        ],
+        "labels": [
+          "chinese-ui",
+          "no-api-key"
+        ],
+        "sortKeys": {
+          "pinned": 1
+        }
+      },
+      "versions": [
+        {
+          "version": "0.5.1",
+          "publishTimestamp": 1792746983,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-alpha.1"
+          }
+        },
+        {
+          "version": "0.5.0",
+          "publishTimestamp": 1792745040,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-alpha.1"
+          }
+        }
+      ]
+    }
+  ]
+}
