@@ -1,4 +1,5 @@
-node_modules/
+# 只忽略仓库根目录的依赖目录，vendor/ 里原样取出的包必须提交
+/node_modules/
 .DS_Store
 Thumbs.db
 *.log
