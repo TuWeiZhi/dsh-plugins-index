@@ -4,8 +4,8 @@
     "zh": "TuWeiZhi 的 DSH 插件"
   },
   "description": {
-    "en": "Hand-picked bundles for DeepSeek Harness: the balance whale widget and a word-selection translator.",
-    "zh": "DeepSeek Harness 的两个自用增强插件：余额小鲸鱼挂件、划词翻译。"
+    "en": "Hand-picked bundles for DeepSeek Harness: the balance whale widget, a word-selection translator, and a desktop pet.",
+    "zh": "DeepSeek Harness 的三个自用增强插件：余额小鲸鱼挂件、划词翻译、桌面宠物。"
   },
   "metadata": {
     "categories": {
@@ -14,6 +14,9 @@
       },
       "translation": {
         "title": { "en": "Translation", "zh": "翻译" }
+      },
+      "pet": {
+        "title": { "en": "Desktop Pets", "zh": "桌面宠物" }
       }
     },
     "labels": {
@@ -52,6 +55,20 @@
         "keywords": ["translation", "划词翻译", "word-selection", "dictionary"],
         "labels": ["chinese-ui", "no-api-key"],
         "sortKeys": { "pinned": 1 }
+      }
+    },
+    {
+      "name": "@tuweizhi/dsh-pet",
+      "title": { "en": "Desktop Pet", "zh": "桌面宠物" },
+      "description": {
+        "en": "A pixel pet that lives in a corner of the DSH window: drag it around, it chatters on its own, throws tantrums and reacts to your work status.",
+        "zh": "住在 DSH 窗口角落里的桌面宠物：可拖拽、会自己碎碎念、会扔东西发脾气，也会跟着你的忙碌状态换动作。"
+      },
+      "icon": "icons/pet.png",
+      "metadata": {
+        "category": "pet",
+        "keywords": ["pet", "desktop-pet", "桌面宠物", "碎碎念", "meme", "companion"],
+        "labels": ["chinese-ui"]
       }
     }
   ]

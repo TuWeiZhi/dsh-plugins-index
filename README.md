@@ -1,6 +1,6 @@
 # DSH 插件索引 · TuWeiZhi's DSH Plugins
 
-一份 DeepSeek Harness（DSH）**插件市场索引**，格式 1。把它加到 DSH 的「发现」标签页后，就能在图形界面里安装、查看下面这两个插件。
+一份 DeepSeek Harness（DSH）**插件市场索引**，格式 1。把它加到 DSH 的「发现」标签页后，就能在图形界面里安装、查看下面这三个插件。
 
 ```text
 https://raw.githubusercontent.com/TuWeiZhi/dsh-plugins-index/main/index.json
@@ -15,12 +15,12 @@ DSH 的插件页里有一个「发现」标签页，但它**不连任何中央�
 
 所以「上架」这件事在 DSH 里等价于两件事：
 
-1. 把插件发布到 npm（本仓库的两个包都已在 npm 上）；
+1. 把插件发布到 npm（本仓库的三个包都已在 npm 上）；
 2. 发布一份符合**格式 1** 的索引 JSON，并把它放在一个**稳定的、不重定向的** URL 上，让用户把它添加为索引源。
 
 本仓库就是第 2 步。它没有任何服务端、没有数据库、不需要 token——本质是一个由 CI 定时重新生成的静态 JSON。
 
-## 安装这两个插件
+## 安装这三个插件（装哪个都只需前两步）
 
 **第 1 步 · 打开市场功能**（只需一次）
 
@@ -47,10 +47,11 @@ https://raw.githubusercontent.com/TuWeiZhi/dsh-plugins-index/main/index.json
 | --- | --- | --- |
 | [`@tuweizhi/dsh-whale-widget`](https://github.com/TuWeiZhi/dsh-whale-widget) | 右下角 DeepSeek 余额小鲸鱼挂件：余额 / 今日已用 / 峰谷定价、可自定义气泡点击序列、悬浮快捷编辑、音效与每轮消耗 | 见索引 |
 | [`@tuweizhi/dsh-translator`](https://github.com/TuWeiZhi/dsh-translator) | 划词翻译：划选文本即现悬浮按钮，默认走免 Key 的公共翻译接口，也可切到 harness 自带大模型 | `>=0.2.1-alpha.1` |
+| [`@tuweizhi/dsh-pet`](https://github.com/TuWeiZhi/dsh-pet) | 桌面宠物：住在窗口角落里的小家伙，可拖拽、会自己碎碎念（全本地语句池、不烧 token）、会扔东西发脾气，并跟着你的工作状态换动作 | 未声明（任意版本） |
 
-两个包都是 MIT 代码 + 明确的 fork 说明；鲸鱼挂件的 `assets/**` 与 `icon.png` 沿用上游 **as-is** 声明（不随 MIT 再许可），详见该仓库的 `PROVENANCE.md`。
+三个包都是 MIT 代码 + 明确的 fork 说明；鲸鱼挂件的 `assets/**` 与 `icon.png` 沿用上游 **as-is** 声明（不随 MIT 再许可），详见该仓库的 `PROVENANCE.md`；桌面宠物是 `PC2005-cloud/dsh-pet` 0.3.8 的增强 fork，素材版权同样归上游，详见该仓库的 `NOTICE.md`。
 
-本索引里两个插件的图标是**内联 `data:` 图**（鲸鱼缩到 128×128 后 8.3 KB，翻译是 0.5 KB 的 SVG），所以添加索引源时不会因为你浏览市场而向第三方暴露 IP。
+本索引里三个插件的图标是**内联 `data:` 图**（鲸鱼缩到 128×128 后 8.3 KB，翻译是 0.5 KB 的 SVG，宠物缩到 128×128 后 26 KB），所以添加索引源时不会因为你浏览市场而向第三方暴露 IP。
 
 ## 想把自己的插件也放进来
 
@@ -134,4 +135,4 @@ node scripts/build-index.mjs --write
 
 本仓库内容（清单、脚本、生成的索引）为 MIT，见 [LICENSE](./LICENSE)。
 `vendor/` 下的校验器与 `semver` 归各自作者，均为 MIT，原样保留其 LICENSE。
-两个插件图标的美术版权归原作者，沿用其仓库的 as-is 声明——它们只是被缩放到更适合图标位显示。
+三个插件图标的美术版权归原作者，沿用其仓库的 as-is 声明——本索引只是把它们缩放到更适合图标位显示。
