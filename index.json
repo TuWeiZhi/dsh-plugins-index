@@ -5,8 +5,8 @@
     "zh": "TuWeiZhi 的 DSH 插件"
   },
   "description": {
-    "en": "Hand-picked bundles for DeepSeek Harness: the balance whale widget, a word-selection translator, a desktop pet, and a session deleter.",
-    "zh": "DeepSeek Harness 的四个自用增强插件：余额小鲸鱼挂件、划词翻译、桌面宠物、会话删除。"
+    "en": "Hand-picked bundles for DeepSeek Harness: the balance whale widget, a word-selection translator, a desktop pet, a session deleter, and center-screen popups when an answer is done or waiting on you.",
+    "zh": "DeepSeek Harness 的五个自用增强插件：余额小鲸鱼挂件、划词翻译、桌面宠物、会话删除、回答完毕/需要操作时的屏幕居中弹窗。"
   },
   "metadata": {
     "categories": {
@@ -32,6 +32,12 @@
         "title": {
           "en": "Sessions",
           "zh": "会话管理"
+        }
+      },
+      "notification": {
+        "title": {
+          "en": "Notifications",
+          "zh": "通知提醒"
         }
       }
     },
@@ -60,6 +66,55 @@
     }
   },
   "plugins": [
+    {
+      "name": "@tuweizhi/dsh-notify",
+      "title": {
+        "en": "Center-Screen Popups",
+        "zh": "居中弹窗提醒"
+      },
+      "description": {
+        "en": "When a main session finishes answering or needs you — approval, a question, an error, a token-limit cutoff — a topmost WinForms card pops dead-center on the monitor your cursor is on, with a sound. Not a taskbar toast. Subagents, delegated sessions and cancelled turns stay quiet; one window at a time.",
+        "zh": "主会话回答完毕、等你批准、向你提问、报错或输出被截断时，在鼠标所在屏幕正中央弹出置顶卡片并响提示音——不是能假装没看见的任务栏气泡。子代理/委派会话/主动取消不弹，同一时刻只弹一个窗。仅 Windows。"
+      },
+      "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4IiB3aWR0aD0iMTI4IiBoZWlnaHQ9IjEyOCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzJiM2E2NyIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMxNTFkMzMiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJhciIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjAiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNmZjlhM2QiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjZTg1ZDA0Ii8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iMTI4IiBoZWlnaHQ9IjEyOCIgcng9IjI2IiBmaWxsPSJ1cmwoI2JnKSIvPgogIDwhLS0gY2VudGVyLXNjcmVlbiBwb3B1cCBjYXJkIC0tPgogIDxnPgogICAgPHJlY3QgeD0iMjgiIHk9IjM0IiB3aWR0aD0iNzIiIGhlaWdodD0iNTQiIHJ4PSI4IiBmaWxsPSIjZmZmZmZmIi8+CiAgICA8cmVjdCB4PSIyOCIgeT0iMzQiIHdpZHRoPSI3MiIgaGVpZ2h0PSIxMiIgcng9IjgiIGZpbGw9InVybCgjYmFyKSIvPgogICAgPHJlY3QgeD0iMjgiIHk9IjQwIiB3aWR0aD0iNzIiIGhlaWdodD0iNiIgZmlsbD0idXJsKCNiYXIpIi8+CiAgICA8Y2lyY2xlIGN4PSIzNyIgY3k9IjQwIiByPSIyLjIiIGZpbGw9IiNmZmZmZmYiIG9wYWNpdHk9IjAuODUiLz4KICAgIDxyZWN0IHg9IjM4IiB5PSI1NCIgd2lkdGg9IjUyIiBoZWlnaHQ9IjYiIHJ4PSIzIiBmaWxsPSIjMzE0MDVmIi8+CiAgICA8cmVjdCB4PSIzOCIgeT0iNjYiIHdpZHRoPSIzOCIgaGVpZ2h0PSI0IiByeD0iMiIgZmlsbD0iIzhmYTFjNCIvPgogICAgPHJlY3QgeD0iMzgiIHk9Ijc0IiB3aWR0aD0iNDQiIGhlaWdodD0iNCIgcng9IjIiIGZpbGw9IiNjM2NkZTMiLz4KICAgIDxyZWN0IHg9IjcwIiB5PSI4MCIgd2lkdGg9IjIyIiBoZWlnaHQ9IjkiIHJ4PSI0LjUiIGZpbGw9InVybCgjYmFyKSIvPgogICAgPHJlY3QgeD0iNzYiIHk9IjgzLjIiIHdpZHRoPSIxMCIgaGVpZ2h0PSIyLjYiIHJ4PSIxLjMiIGZpbGw9IiNmZmZmZmYiLz4KICA8L2c+CiAgPCEtLSBmb2N1cyBtYXJrczogdGhlIGNhcmQgc2l0cyBkZWFkIGNlbnRlciBvZiB0aGUgZGlzcGxheSAtLT4KICA8ZyBzdHJva2U9IiM2ZWU3ZmYiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBvcGFjaXR5PSIwLjkiPgogICAgPHBhdGggZD0iTTE2IDIydi00YTIgMiAwIDAgMSAyLTJoNCIvPgogICAgPHBhdGggZD0iTTEwNiAxNmg0YTIgMiAwIDAgMSAyIDJ2NCIvPgogICAgPHBhdGggZD0iTTExMiAxMDZ2NGEyIDIgMCAwIDEtMiAyaC00Ii8+CiAgICA8cGF0aCBkPSJNMjIgMTEyaC00YTIgMiAwIDAgMS0yLTJ2LTQiLz4KICA8L2c+Cjwvc3ZnPgo=",
+      "author": "TuWeiZhi",
+      "homepage": "https://github.com/TuWeiZhi/dsh-notify#readme",
+      "repository": {
+        "url": "https://github.com/TuWeiZhi/dsh-notify"
+      },
+      "metadata": {
+        "category": "notification",
+        "keywords": [
+          "notify",
+          "popup",
+          "reminder",
+          "modal",
+          "弹窗",
+          "提醒",
+          "通知",
+          "居中"
+        ],
+        "labels": [
+          "chinese-ui",
+          "no-api-key"
+        ],
+        "sortKeys": {
+          "pinned": 4
+        }
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "publishTimestamp": 1794406335,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-alpha.1"
+          }
+        }
+      ]
+    },
     {
       "name": "@tuweizhi/dsh-session-delete",
       "title": {
