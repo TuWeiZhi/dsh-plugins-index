@@ -4,8 +4,8 @@
     "zh": "TuWeiZhi 的 DSH 插件"
   },
   "description": {
-    "en": "Hand-picked bundles for DeepSeek Harness: the balance whale widget, a word-selection translator, and a desktop pet.",
-    "zh": "DeepSeek Harness 的三个自用增强插件：余额小鲸鱼挂件、划词翻译、桌面宠物。"
+    "en": "Hand-picked bundles for DeepSeek Harness: the balance whale widget, a word-selection translator, a desktop pet, and a session deleter.",
+    "zh": "DeepSeek Harness 的四个自用增强插件：余额小鲸鱼挂件、划词翻译、桌面宠物、会话删除。"
   },
   "metadata": {
     "categories": {
@@ -17,6 +17,9 @@
       },
       "pet": {
         "title": { "en": "Desktop Pets", "zh": "桌面宠物" }
+      },
+      "session": {
+        "title": { "en": "Sessions", "zh": "会话管理" }
       }
     },
     "labels": {
@@ -35,6 +38,21 @@
     }
   },
   "plugins": [
+    {
+      "name": "@tuweizhi/dsh-session-delete",
+      "title": { "en": "Session Delete", "zh": "会话删除" },
+      "description": {
+        "en": "Really delete a session — including the one on screen and the one still running. The directory moves to sessions-trash, the row disappears at once, and you land on the empty view instead of a full page reload.",
+        "zh": "真正删掉一个会话——包括正打开着的和还在跑的。目录移进 sessions-trash，列表行立刻消失，退回空状态而不是整页刷新。"
+      },
+      "icon": "icons/dsh-session-delete.svg",
+      "metadata": {
+        "category": "session",
+        "keywords": ["session", "delete", "trash", "会话", "删除", "回收站"],
+        "labels": ["chinese-ui"],
+        "sortKeys": { "pinned": 3 }
+      }
+    },
     {
       "name": "@tuweizhi/dsh-whale-widget",
       "title": { "en": "Balance Whale Widget", "zh": "余额小鲸鱼挂件" },
